@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de vacinas</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>Cadastro de Vacinas</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Dados Pessoais</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nome Completo</label>
+                            <input type="text" placeholder="Digite seu nome" id="nome" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Data de Nascimento</label>
+                            <input type="date" id="data_nascimento">
+                        </div>
+
+                        <div class="input-field">
+                            <label>CPF</label>
+                            <input type="text" placeholder="Digite seu CPF" id="cpf" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nome da Vacina</label>
+                            <input type="text" placeholder="Nome da vacina" id="nome_vacina" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Data de Vacinação (hoje)</label>
+                            <input type="date" id="data_vacinacao" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Data de Reforço (30 dias)</label>
+                            <input type="date" id="reforco" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nextBtn" id="button">
+                    <span class="btnText">Cadastrar</span>
+                </button>
+
+                <div class="details ID" id="cadastrados">
+                    <span class="title">Lista de Cadstrados</span>
+                    <hr>
+                    
+                </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Importação da biblioteca Jquery -->
+    <!-- ============================================= -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- Importação da biblioteca Jquery Mask -->
+    <!-- ============================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js" integrity="sha512-oJCa6FS2+zO3EitUSj+xeiEN9UTr+AjqlBZO58OPadb2RfqwxHpjTU8ckIC8F4nKvom7iru2s8Jwdo+Z8zm0Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        // Código apenas para formatar o cpf da pessoa
+        // ============================================
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00');
+        })
+        
+    </script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
